@@ -398,7 +398,7 @@ h2 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px; } }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .swiper .swiper-pagination {
       position: static;
       margin-top: 16px;
@@ -417,6 +417,7 @@ h2 {
       gap: 0; } }
 
 .modal-feedback {
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   right: 0;
@@ -441,11 +442,15 @@ h2 {
   .modal-feedback__close {
     transform: translate(-95px, 36px);
     display: block;
-    background-image: url(/src/img/burger-close.svg);
+    background-image: url(./static/burger-close.svg);
     width: 40px;
     height: 40px;
     margin-right: 16px;
     background-color: transparent; }
+    @media (max-width: 464px) {
+      .modal-feedback__close {
+        transform: translate(0);
+        margin: 32px 0; } }
   .modal-feedback__title {
     display: flex;
     align-items: center;
@@ -503,6 +508,7 @@ h2 {
     transform: translateX(0%); }
 
 .modal-call {
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   right: 0;
@@ -527,11 +533,15 @@ h2 {
   .modal-call__close {
     transform: translate(-95px, 36px);
     display: block;
-    background-image: url(/src/img/burger-close.svg);
+    background-image: url(./static/burger-close.svg);
     width: 40px;
     height: 40px;
     margin-right: 16px;
     background-color: transparent; }
+    @media (max-width: 464px) {
+      .modal-call__close {
+        transform: translate(0);
+        margin: 32px 0; } }
   .modal-call__title {
     display: flex;
     align-items: center;
@@ -610,7 +620,7 @@ h2 {
     width: 96.55px;
     height: 50.81px;
     margin-left: 30px; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .header__link {
       margin-left: 20px; } }
   @media (min-width: 768px) {
@@ -673,6 +683,7 @@ h2 {
       display: inline-block; } }
 
 .menu {
+  box-sizing: border-box;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -954,7 +965,7 @@ h2 {
   padding: 0 32px;
   border-top: 1px solid #d9fff5;
   margin-bottom: 16px; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .brands {
       padding: 0 16px; } }
   .brands__header {
@@ -1001,7 +1012,7 @@ h2 {
     transform: rotate(180deg);
     height: 24px;
     width: 24px; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .brands__button {
       display: none; } }
 
@@ -1010,7 +1021,7 @@ h2 {
   padding: 0 32px;
   border-top: 1px solid #d9fff5;
   margin-bottom: 16px; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .devices {
       padding: 0 16px; } }
   .devices__header {
@@ -1065,7 +1076,7 @@ h2 {
     transform: rotate(180deg);
     height: 24px;
     width: 24px; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .devices__button {
       display: none; } }
 
@@ -1074,7 +1085,7 @@ h2 {
   padding: 0 32px;
   border-top: 1px solid #d9fff5;
   margin-bottom: 16px; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .prices {
       padding: 0 16px; } }
   .prices__header {
@@ -1114,7 +1125,7 @@ h2 {
     border-radius: 6px; }
     .prices__list .price {
       background-color: #ffffff; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .prices__list .price {
           border: 1px solid #eaeaea;
           border-radius: 6px; } }
@@ -1129,7 +1140,7 @@ h2 {
         height: 64px;
         align-items: center;
         margin: 0 24px; }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           .prices__list .price__wrapper {
             box-sizing: border-box;
             margin: 0;
@@ -1141,7 +1152,7 @@ h2 {
             padding: 16px; } }
       .prices__list .price__name {
         width: 348px; }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           .prices__list .price__name {
             width: auto;
             grid-column: span 2; }
@@ -1152,7 +1163,7 @@ h2 {
               padding-bottom: 4px; } }
       .prices__list .price__value {
         width: 74px; }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           .prices__list .price__value {
             width: auto;
             grid-column: span 2;
@@ -1164,7 +1175,7 @@ h2 {
               padding-bottom: 4px; } }
       .prices__list .price__time {
         width: 81px; }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           .prices__list .price__time {
             width: auto;
             align-self: end; }
@@ -1186,7 +1197,7 @@ h2 {
           content: url(./static/goside.svg);
           width: 24px;
           height: 24px; }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           .prices__list .price__button {
             align-self: end; } }
   .prices__footer-text {
@@ -1226,7 +1237,7 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr;
   background-color: #f8f8f8;
   padding: 32px; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .footer {
       display: flex;
       flex-direction: column;
@@ -1243,12 +1254,12 @@ h2 {
     color: #7e7e82; }
     .footer__item:first-child {
       text-align: left; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .footer__item:first-child {
           text-align: center; } }
     .footer__item:last-child {
       text-align: right; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .footer__item:last-child {
           text-align: center; } }
 
