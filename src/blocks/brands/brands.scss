@@ -4,7 +4,7 @@
   border-top: 1px solid $border;
   margin-bottom: 16px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 0 16px;
   }
 
@@ -70,7 +70,7 @@
     width: 24px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &__button {
       display: none;
     }

@@ -4,7 +4,7 @@
   background-color: $bg;
   padding: 32px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +24,7 @@
     &:first-child {
       text-align: left;
 
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         text-align: center;
       }
     }
@@ -32,7 +32,7 @@
     &:last-child {
       text-align: right;
 
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         text-align: center;
       }
     }
