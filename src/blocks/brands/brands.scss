@@ -1,0 +1,78 @@
+.brands {
+  background-color: $bg;
+  padding: 0 32px;
+  border-top: 1px solid $border;
+  margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+
+  &__header {
+    background: linear-gradient(90deg, $bg 0%, $white 98.61%);
+    transform: translateX(32px);
+  }
+
+  &__title {
+    padding: 16px 0;
+    transform: translateX(-32px);
+  }
+
+  &__list {
+    .brand {
+      border: 1px solid $light-gray;
+      border-radius: 6px;
+      background-color: $white;
+
+      &__link {
+        display: flex;
+        justify-content: space-between;
+        min-height: 72px;
+        align-items: center;
+        padding: 0 16px;
+      }
+
+      &__go-icon {
+        background-image: url(../img/go.svg);
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-family: 'TT Lakes Medium';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: $text;
+    cursor: pointer;
+
+    &::before {
+      content: url(../img/expand.svg);
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &__button.rotate::before {
+    content: url(../img/expand.svg);
+    transform: rotate(180deg);
+    height: 24px;
+    width: 24px;
+  }
+
+  @media (max-width: 768px) {
+    &__button {
+      display: none;
+    }
+  }
+}

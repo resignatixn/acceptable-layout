@@ -1,0 +1,188 @@
+.menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 320px;
+  height: 100vh;
+  transform: none;
+  background-color: white;
+
+  @media (max-width: 1367px) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100svw;
+    max-width: 360px;
+    transform: translateX(-400px);
+    box-shadow: -2px 0 4px 0 rgba(69, 79, 126, 0.02),
+      16px 0 52px 0 rgba(14, 24, 80, 0.2);
+  }
+
+  &--active {
+    transform: translateX(0px);
+  }
+
+  &__header {
+    padding: 18px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    background-image: url(../img/logo.svg);
+    width: 98px;
+    height: 52px;
+  }
+
+  &__button:not(:last-child) {
+    display: none;
+  }
+
+  &__button:last-child {
+    background-image: url(../img/search.svg);
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 1367px) {
+    &__button:not(:last-child) {
+      display: block;
+      background-image: url(../img/burger-close.svg);
+      width: 40px;
+      height: 40px;
+      margin-right: 16px;
+    }
+    &__button:last-child {
+      margin-left: 78px;
+    }
+
+    &__logo {
+      margin-left: 14px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 0 24px;
+    max-height: 800px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 24px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: 'TT Lakes Medium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+  }
+
+  &__item > a:hover {
+    transition: color 0.3s;
+    color: $second-color;
+  }
+
+  &__item:hover::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    height: 32px;
+    width: 3px;
+    border-radius: 6px;
+    background-color: $main;
+  }
+
+  &__item:not(:last-child) {
+    margin: 0 0 32px 0;
+  }
+
+  &__contact--buttons {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__contact--button:nth-child(1) {
+    background-image: url(../img/call.svg);
+    width: 40px;
+    height: 40px;
+  }
+
+  &__contact--button:nth-child(2) {
+    background-image: url(../img/chat.svg);
+    width: 40px;
+    height: 40px;
+  }
+
+  &__contact--button:nth-child(3) {
+    background-image: url(../img/profile.svg);
+    width: 40px;
+    height: 40px;
+  }
+
+  &__contact--button:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  &__mail {
+    font-family: 'TT Lakes Medium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    padding-bottom: 12px;
+  }
+
+  &__tel {
+    font-family: 'TT Lakes Bold';
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6000000238418579px;
+    text-align: left;
+  }
+
+  &__languages {
+    display: flex;
+  }
+
+  &__language:first-child {
+    color: $second-color;
+  }
+
+  &__language {
+    font-family: 'TT Lakes Medium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+  }
+
+  &__language:not(:last-child) {
+    margin-right: 7px;
+  }
+}

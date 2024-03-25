@@ -1,0 +1,118 @@
+.header {
+  padding: 18px 16px;
+  background-color: white;
+  border-bottom: 1px solid $border;
+
+  @media (min-width: 1368px) {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    background-image: url(../img/burger.svg);
+    height: 40px;
+    width: 40px;
+  }
+
+  &__link {
+    background-image: url(../img/logo.svg);
+    width: 96.55px;
+    height: 50.81px;
+    margin-left: 30px;
+  }
+
+  @media (max-width: 768px) {
+    &__link {
+      margin-left: 20px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__menu::after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      top: 1px;
+      width: 2px;
+      height: 32px;
+      border-radius: 1px;
+      background-color: $light-gray;
+      margin: 0 56px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &__button {
+    margin: 0 8px;
+  }
+
+  &__button:last-child {
+    background-image: url(../img/checkstatus.svg);
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0 8px;
+  }
+
+  &__button:nth-child(1) {
+    background-image: url(../img/call.svg);
+    width: 40px;
+    height: 40px;
+    margin: 0 12px 0 8px;
+  }
+
+  &__button:nth-child(2) {
+    background-image: url(../img/chat.svg);
+    width: 40px;
+    height: 40px;
+    margin: 0 12px 0 8px;
+  }
+
+  &__button:nth-child(3) {
+    background-image: url(../img/profile.svg);
+    width: 40px;
+    height: 40px;
+    margin: 0 12px 0 8px;
+  }
+
+  &__button:nth-child(4) {
+    background-image: url(../img/repair.svg);
+    width: 40px;
+    height: 40px;
+    margin: 0 8px 0 18px;
+  }
+
+  &__button:nth-child(4)::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 2px;
+    height: 32px;
+    left: -66px;
+    top: 1px;
+    border-radius: 1px;
+    background-color: $light-gray;
+    margin: 0 51px;
+    cursor: default;
+  }
+
+  &__button--hidden {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    &__button--hidden {
+      display: inline-block;
+    }
+  }
+}

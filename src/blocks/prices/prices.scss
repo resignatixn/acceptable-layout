@@ -1,0 +1,209 @@
+.prices {
+  background-color: $bg;
+  padding: 0 32px;
+  border-top: 1px solid $border;
+  margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+
+  &__header {
+    background: linear-gradient(90deg, $bg 0%, white 98.61%);
+    transform: translateX(32px);
+  }
+
+  &__title {
+    padding: 16px 0;
+    transform: translateX(-32px);
+  }
+
+  &__desc {
+    font-family: 'TT Lakes Regular';
+    font-size: 14px;
+    color: $second-color;
+    line-height: 18px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 768px) {
+    &__desc {
+      display: none;
+    }
+  }
+
+  &__name {
+    width: 348px;
+  }
+
+  &__time {
+    display: flex;
+    justify-content: left;
+    width: 81px;
+  }
+
+  &__value {
+    width: 74px;
+  }
+
+  &__button {
+    width: 123px;
+  }
+
+  &__list {
+    display: flex;
+    background-color: $bg;
+    border-radius: 6px;
+
+    .price {
+      background-color: $white;
+
+      @media (max-width: 768px) {
+        border: 1px solid $light-gray;
+        border-radius: 6px;
+      }
+
+      &__wrapper {
+        font-family: 'TT Lakes Regular';
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        height: 64px;
+        align-items: center;
+        margin: 0 24px;
+
+        @media (max-width: 768px) {
+          box-sizing: border-box;
+          margin: 0;
+          display: grid;
+          grid-template-columns: auto 120px;
+          row-gap: 16px;
+          width: 260px;
+          height: 200px;
+          padding: 16px;
+        }
+      }
+
+      &__name {
+        width: 348px;
+
+        @media (max-width: 768px) {
+          width: auto;
+          grid-column: span 2;
+
+          &::before {
+            content: 'Ремонтные услуги';
+            display: block;
+            color: $second-color;
+            padding-bottom: 4px;
+          }
+        }
+      }
+
+      &__value {
+        width: 74px;
+
+        @media (max-width: 768px) {
+          width: auto;
+          grid-column: span 2;
+          align-self: center;
+
+          &::before {
+            content: 'Цена';
+            display: block;
+            color: $second-color;
+            padding-bottom: 4px;
+          }
+        }
+      }
+
+      &__time {
+        width: 81px;
+
+        @media (max-width: 768px) {
+          width: auto;
+          align-self: end;
+
+          &::before {
+            content: 'Срок';
+            display: block;
+            color: $second-color;
+            padding-bottom: 4px;
+          }
+        }
+      }
+
+      &__button {
+        color: white;
+        text-transform: uppercase;
+        background-color: $pink;
+        border-radius: 20px;
+        padding: 4px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &::after {
+          content: url(../img/goside.svg);
+          width: 24px;
+          height: 24px;
+        }
+
+        @media (max-width: 768px) {
+          align-self: end;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    &-text {
+      font-family: 'TT Lakes Regular';
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: left;
+      max-width: 421px;
+      margin-bottom: 16px;
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      font-family: 'TT Lakes Medium';
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.20000000298023224px;
+      text-align: left;
+      margin-right: 10px;
+
+      &::after {
+        content: url(../img/more.svg);
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .swiper-slide {
+    &:not(:first-child)::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: $light-gray;
+      width: 97%;
+      position: absolute;
+      top: 0;
+      left: 45%;
+      transform: translateX(-45%);
+    }
+  }
+}
