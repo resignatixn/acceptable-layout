@@ -1,6 +1,8 @@
-const modalOpenBtn = document.querySelector('.services__button:first-child')
+const modalOpenBtn = document.querySelector(
+  '.menu__contact--button:nth-child(2)'
+)
 const modalOpenBtnTablet = document.querySelector(
-  '.header__button:nth-child(4)'
+  '.header__button:nth-child(2)'
 )
 const modalCloseBtn = document.querySelector('.modal-feedback__close')
 const modalFeedback = document.querySelector('.modal-feedback')
